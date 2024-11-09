@@ -10,27 +10,34 @@ using System.Windows.Forms;
 
 namespace SkillInternatoinal
 {
-    public partial class Form1 : Form
+    public partial class login : Form
     {
-        public Form1()
+        public login()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void login_Load(object sender, EventArgs e)
         {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            login loginForm = new login();
-            loginForm.Show();
+            string user = textBox1.Text;
+            string password = textBox2.Text;
+
+            if (user == "Admin" && password == "Skills@123")
+            {
+                MessageBox.Show("Login sucess!");
+            }
+            else
+            {
+                MessageBox.Show("Your login credentials do not match our records. Please recheck and try again.", 
+                    "Error", 
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Error);
+            }
         }
     }
 }

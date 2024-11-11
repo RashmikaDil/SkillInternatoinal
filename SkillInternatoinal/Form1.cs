@@ -30,6 +30,7 @@ namespace SkillInternatoinal
             if (user == "Admin" && password == "Skills@123")
             {
                 MessageBox.Show("Login sucess!");
+                Dashboard dashboard = new Dashboard();
             }
             else
             {
@@ -43,7 +44,8 @@ namespace SkillInternatoinal
         private void button2_Click(object sender, EventArgs e)
         {
             var result = MessageBox.Show("Are you sure you want to exit?", "Exit Confirmation",
-                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                 MessageBoxButtons.YesNo, 
+                                 MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 Application.Exit();

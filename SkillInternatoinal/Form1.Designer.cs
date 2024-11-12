@@ -42,6 +42,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -102,10 +103,10 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.button1.Location = new System.Drawing.Point(398, 305);
+            this.button1.Location = new System.Drawing.Point(97, 153);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(227, 35);
+            this.button1.Size = new System.Drawing.Size(155, 35);
             this.button1.TabIndex = 5;
             this.button1.Text = "LOGIN";
             this.button1.UseVisualStyleBackColor = false;
@@ -138,14 +139,14 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.button3.BackColor = System.Drawing.Color.Azure;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.button3.Location = new System.Drawing.Point(139, 323);
+            this.button3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.button3.Location = new System.Drawing.Point(20, 153);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 30);
+            this.button3.Size = new System.Drawing.Size(71, 35);
             this.button3.TabIndex = 8;
             this.button3.Text = "CLEAR";
             this.button3.UseVisualStyleBackColor = false;
@@ -164,6 +165,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.groupBox1.Location = new System.Drawing.Point(373, 152);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(279, 201);
@@ -175,14 +179,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightCyan;
+            this.BackColor = System.Drawing.Color.Azure;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(675, 367);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
@@ -196,6 +198,7 @@
             this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

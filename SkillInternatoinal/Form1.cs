@@ -29,12 +29,21 @@ namespace SkillInternatoinal
 
             if (user == "Admin" && password == "Skills@123")
             {
-                MessageBox.Show("Login sucess!");
+                MessageBox.Show(
+                    "Login sucess!",
+                    "Information",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                
                 Dashboard dashboard = new Dashboard();
+                dashboard.Show();
+                this.Hide();
+
             }
             else
             {
-                MessageBox.Show("Your login credentials do not match our records. Please recheck and try again.",
+                MessageBox.Show(
+                    "Your login credentials do not match our records. Please recheck and try again.",
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);

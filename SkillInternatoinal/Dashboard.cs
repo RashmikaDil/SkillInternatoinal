@@ -16,5 +16,12 @@ namespace SkillInternatoinal
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            login login = new login();
+            login.Show();
+            this.Close();
+        }
     }
 }

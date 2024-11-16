@@ -35,7 +35,7 @@ namespace SkillInternatoinal
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 
-                Dashboard dashboard = new Dashboard();
+                register dashboard = new register();
                 dashboard.Show();
                 this.Hide();
 

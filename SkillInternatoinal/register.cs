@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 using Application = System.Net.Mime.MediaTypeNames.Application;
+using System.Data.SqlClient;
 
 namespace SkillInternatoinal
 {
     public partial class register : Form
     {
+        string g;
+        SqlConnection conn = null;
         public register()
         {
             InitializeComponent();
@@ -21,7 +24,7 @@ namespace SkillInternatoinal
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+         
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -32,6 +35,11 @@ namespace SkillInternatoinal
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

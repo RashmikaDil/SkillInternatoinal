@@ -10,27 +10,37 @@ using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 using Application = System.Net.Mime.MediaTypeNames.Application;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SkillInternatoinal
 {
     public partial class register : Form
     {
+
+
         string g;
         SqlConnection conn = null;
         public register()
         {
             conn = new SqlConnection("Data Source=DESKTOP-55L8O5D\\\\SQLEXPRESS;Initial Catalog=skill_international;Integrated Security=True;");
             InitializeComponent();
+            LoadComboBoxData();
+
+
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-         
+   
         }
+        
+        
+       
+
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            DeleteRecord();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -51,7 +61,7 @@ namespace SkillInternatoinal
 
 
             string constring = ("Data Source=DESKTOP-55L8O5D\\SQLEXPRESS;Initial Catalog=skill_international;Integrated Security=True;");
-            string quary = "INSERT INTO registers (regNo,firstName,lastName , dateOfBirth, gender , address , email , mobilePhone , homePhone , parentName , nic , contactNo ) VALUES ('" + comboBox1.Text + "','" + textBox1.Text + "' , '" + textBox2.Text + "','" + dateTimePicker1.Value.Date + "','" + g + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "','" + textBox8.Text + "','" + textBox9.Text + "')";
+            string quary = "INSERT INTO registers (regNo,firstName,lastName , dateOfBirth, gender , address , email , mobilePhone , homePhone , parentName , nic , contactNo ) VALUES ('" + regInput.Text + "','" + f_name.Text + "' , '" + l_name.Text + "','" + dob.Value.Date + "','" + g + "','" + address_input.Text + "','" + email_input.Text + "','" + mp.Text + "','" + hp.Text + "','" + p_name.Text + "','" + nic_no.Text + "','" + c_no.Text + "')";
             SqlConnection conn;
             conn = new SqlConnection(constring);
             SqlCommand runQuary = new SqlCommand(quary, conn);
@@ -69,6 +79,75 @@ namespace SkillInternatoinal
         private void register_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            regInput.Text = " ";
+            f_name.Clear();
+            l_name.Clear();
+            dob.Text = "";
+            address_input.Clear();
+            email_input.Clear();
+            mp.Clear();
+            hp.Clear();
+            p_name.Clear();
+            nic_no.Clear();
+            c_no.Clear();
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+        }
+
+        private void DeleteRecord()
+        {
+            string a = regInput.Text;
+            string connectionString = ("Data Source=DESKTOP-55L8O5D\\SQLEXPRESS;Initial Catalog=skill_international;Integrated Security=True;");
+            string quary = "DELETE from registers where ";
+            SqlConnection conn;
+            conn = new SqlConnection(connectionString);
+            SqlCommand runQuary = new SqlCommand(quary, conn);
+
+            conn.Open();
+            runQuary.ExecuteNonQuery();
+            MessageBox.Show("Sucessfully ! ", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void LoadComboBoxData()
+        {
+           
+            string connectionString = ("Data Source=DESKTOP-55L8O5D\\SQLEXPRESS;Initial Catalog=skill_international;Integrated Security=True;");
+
+           
+            string query = "SELECT regNo FROM registers";
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                   
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        
+                        regInput.Items.Add(reader["regNo"].ToString());
+                    }
+
+                    reader.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

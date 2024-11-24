@@ -33,31 +33,31 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.register_btn = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.c_no = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.nic_no = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.p_name = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.hp = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.mp = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.email_input = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.address_input = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.regInput = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dob = new System.Windows.Forms.DateTimePicker();
+            this.l_name = new System.Windows.Forms.TextBox();
+            this.f_name = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -78,10 +78,10 @@
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.register_btn);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.regInput);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -108,6 +108,7 @@
             this.button4.TabIndex = 9;
             this.button4.Text = "Clear";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -138,28 +139,28 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // register_btn
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(701, 235);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 37);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Register";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.register_btn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.register_btn.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.register_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.register_btn.ForeColor = System.Drawing.Color.White;
+            this.register_btn.Location = new System.Drawing.Point(701, 235);
+            this.register_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.register_btn.Name = "register_btn";
+            this.register_btn.Size = new System.Drawing.Size(164, 37);
+            this.register_btn.TabIndex = 6;
+            this.register_btn.Text = "Register";
+            this.register_btn.UseVisualStyleBackColor = false;
+            this.register_btn.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox9);
+            this.groupBox4.Controls.Add(this.c_no);
             this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.textBox8);
+            this.groupBox4.Controls.Add(this.nic_no);
             this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.textBox7);
+            this.groupBox4.Controls.Add(this.p_name);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.groupBox4.Location = new System.Drawing.Point(463, 60);
@@ -171,14 +172,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "\tParent Details";
             // 
-            // textBox9
+            // c_no
             // 
-            this.textBox9.Location = new System.Drawing.Point(105, 78);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(163, 22);
-            this.textBox9.TabIndex = 13;
-            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            this.c_no.Location = new System.Drawing.Point(105, 78);
+            this.c_no.Margin = new System.Windows.Forms.Padding(4);
+            this.c_no.Name = "c_no";
+            this.c_no.Size = new System.Drawing.Size(163, 22);
+            this.c_no.TabIndex = 13;
+            this.c_no.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // label13
             // 
@@ -191,13 +192,13 @@
             this.label13.TabIndex = 12;
             this.label13.Text = "Contact No";
             // 
-            // textBox8
+            // nic_no
             // 
-            this.textBox8.Location = new System.Drawing.Point(105, 50);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(163, 22);
-            this.textBox8.TabIndex = 11;
+            this.nic_no.Location = new System.Drawing.Point(105, 50);
+            this.nic_no.Margin = new System.Windows.Forms.Padding(4);
+            this.nic_no.Name = "nic_no";
+            this.nic_no.Size = new System.Drawing.Size(163, 22);
+            this.nic_no.TabIndex = 11;
             // 
             // label12
             // 
@@ -210,13 +211,13 @@
             this.label12.TabIndex = 10;
             this.label12.Text = "NIC";
             // 
-            // textBox7
+            // p_name
             // 
-            this.textBox7.Location = new System.Drawing.Point(105, 23);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(275, 22);
-            this.textBox7.TabIndex = 9;
+            this.p_name.Location = new System.Drawing.Point(105, 23);
+            this.p_name.Margin = new System.Windows.Forms.Padding(4);
+            this.p_name.Name = "p_name";
+            this.p_name.Size = new System.Drawing.Size(275, 22);
+            this.p_name.TabIndex = 9;
             // 
             // label11
             // 
@@ -231,13 +232,13 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox6);
+            this.groupBox3.Controls.Add(this.hp);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.textBox5);
+            this.groupBox3.Controls.Add(this.mp);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.email_input);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.address_input);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.groupBox3.Location = new System.Drawing.Point(20, 217);
@@ -249,13 +250,13 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "\tContact Details";
             // 
-            // textBox6
+            // hp
             // 
-            this.textBox6.Location = new System.Drawing.Point(109, 145);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(275, 22);
-            this.textBox6.TabIndex = 15;
+            this.hp.Location = new System.Drawing.Point(109, 145);
+            this.hp.Margin = new System.Windows.Forms.Padding(4);
+            this.hp.Name = "hp";
+            this.hp.Size = new System.Drawing.Size(275, 22);
+            this.hp.TabIndex = 15;
             // 
             // label10
             // 
@@ -268,13 +269,13 @@
             this.label10.TabIndex = 14;
             this.label10.Text = "HomePhone";
             // 
-            // textBox5
+            // mp
             // 
-            this.textBox5.Location = new System.Drawing.Point(109, 118);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(275, 22);
-            this.textBox5.TabIndex = 13;
+            this.mp.Location = new System.Drawing.Point(109, 118);
+            this.mp.Margin = new System.Windows.Forms.Padding(4);
+            this.mp.Name = "mp";
+            this.mp.Size = new System.Drawing.Size(275, 22);
+            this.mp.TabIndex = 13;
             // 
             // label9
             // 
@@ -287,13 +288,13 @@
             this.label9.TabIndex = 12;
             this.label9.Text = "MobilePhone";
             // 
-            // textBox4
+            // email_input
             // 
-            this.textBox4.Location = new System.Drawing.Point(109, 91);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(275, 22);
-            this.textBox4.TabIndex = 9;
+            this.email_input.Location = new System.Drawing.Point(109, 91);
+            this.email_input.Margin = new System.Windows.Forms.Padding(4);
+            this.email_input.Name = "email_input";
+            this.email_input.Size = new System.Drawing.Size(275, 22);
+            this.email_input.TabIndex = 9;
             // 
             // label8
             // 
@@ -306,14 +307,14 @@
             this.label8.TabIndex = 11;
             this.label8.Text = "Email\r\n";
             // 
-            // textBox3
+            // address_input
             // 
-            this.textBox3.Location = new System.Drawing.Point(109, 25);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(275, 63);
-            this.textBox3.TabIndex = 10;
+            this.address_input.Location = new System.Drawing.Point(109, 25);
+            this.address_input.Margin = new System.Windows.Forms.Padding(4);
+            this.address_input.Multiline = true;
+            this.address_input.Name = "address_input";
+            this.address_input.Size = new System.Drawing.Size(275, 63);
+            this.address_input.TabIndex = 10;
             // 
             // label7
             // 
@@ -326,14 +327,14 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Address";
             // 
-            // comboBox1
+            // regInput
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(105, 21);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 24);
-            this.comboBox1.TabIndex = 2;
+            this.regInput.FormattingEnabled = true;
+            this.regInput.Location = new System.Drawing.Point(105, 21);
+            this.regInput.Margin = new System.Windows.Forms.Padding(4);
+            this.regInput.Name = "regInput";
+            this.regInput.Size = new System.Drawing.Size(160, 24);
+            this.regInput.TabIndex = 2;
             // 
             // label2
             // 
@@ -350,9 +351,9 @@
             // 
             this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.dob);
+            this.groupBox2.Controls.Add(this.l_name);
+            this.groupBox2.Controls.Add(this.f_name);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
@@ -393,29 +394,30 @@
             this.radioButton1.Text = "Male";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dob
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(109, 76);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(165, 22);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dob.Location = new System.Drawing.Point(109, 76);
+            this.dob.Margin = new System.Windows.Forms.Padding(4);
+            this.dob.Name = "dob";
+            this.dob.Size = new System.Drawing.Size(165, 22);
+            this.dob.TabIndex = 6;
             // 
-            // textBox2
+            // l_name
             // 
-            this.textBox2.Location = new System.Drawing.Point(109, 49);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(275, 22);
-            this.textBox2.TabIndex = 5;
+            this.l_name.Location = new System.Drawing.Point(109, 49);
+            this.l_name.Margin = new System.Windows.Forms.Padding(4);
+            this.l_name.Name = "l_name";
+            this.l_name.Size = new System.Drawing.Size(275, 22);
+            this.l_name.TabIndex = 5;
+            this.l_name.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox1
+            // f_name
             // 
-            this.textBox1.Location = new System.Drawing.Point(109, 22);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(275, 22);
-            this.textBox1.TabIndex = 4;
+            this.f_name.Location = new System.Drawing.Point(109, 22);
+            this.f_name.Margin = new System.Windows.Forms.Padding(4);
+            this.f_name.Name = "f_name";
+            this.f_name.Size = new System.Drawing.Size(275, 22);
+            this.f_name.TabIndex = 4;
             // 
             // label6
             // 
@@ -541,12 +543,12 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox regInput;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker dob;
+        private System.Windows.Forms.TextBox l_name;
+        private System.Windows.Forms.TextBox f_name;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -554,20 +556,20 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox address_input;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox hp;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox mp;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox email_input;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox c_no;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox nic_no;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox p_name;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
@@ -575,6 +577,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button register_btn;
     }
 }

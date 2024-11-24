@@ -11,6 +11,7 @@ using static System.Net.Mime.MediaTypeNames;
 using Application = System.Net.Mime.MediaTypeNames.Application;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Net.NetworkInformation;
 
 namespace SkillInternatoinal
 {
@@ -40,7 +41,28 @@ namespace SkillInternatoinal
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DeleteRecord();
+            string del_query = "Delete from registers where regNo =" + regInput.SelectedItem + "";
+            SqlCommand sqlCommand = new SqlCommand(del_query, conn);
+
+            try
+            {
+                conn.Open();
+                sqlCommand.ExecuteNonQuery();
+
+                DialogResult result;
+                result = MessageBox.Show("Are you sure , Do you real wnat to delete ...?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show("Delete sucessfully", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+
+
+            }
+            catch
+            {
+                MessageBox.Show("Invalid Register Number, Try again!", "register", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { conn.Close(); }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -103,20 +125,9 @@ namespace SkillInternatoinal
             radioButton2.Checked = false;
         }
 
-        private void DeleteRecord()
-        {
-            string a = regInput.Text;
-            string connectionString = ("Data Source=DESKTOP-55L8O5D\\SQLEXPRESS;Initial Catalog=skill_international;Integrated Security=True;");
-            string quary = "DELETE from registers where ";
-            SqlConnection conn;
-            conn = new SqlConnection(connectionString);
-            SqlCommand runQuary = new SqlCommand(quary, conn);
-
-            conn.Open();
-            runQuary.ExecuteNonQuery();
-            MessageBox.Show("Sucessfully ! ", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+       
         private void LoadComboBoxData()
+
         {
            
             string connectionString = ("Data Source=DESKTOP-55L8O5D\\SQLEXPRESS;Initial Catalog=skill_international;Integrated Security=True;");
@@ -148,6 +159,11 @@ namespace SkillInternatoinal
                 
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

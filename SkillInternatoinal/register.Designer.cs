@@ -178,6 +178,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(163, 22);
             this.textBox9.TabIndex = 13;
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // label13
             // 
@@ -521,6 +522,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "register";
             this.Text = "register";
+            this.Load += new System.EventHandler(this.register_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);

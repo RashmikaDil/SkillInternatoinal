@@ -20,13 +20,14 @@ namespace SkillInternatoinal
 
 
         string g;
+        string dbd = "Data Source=DESKTOP-DB9FPLV\\\\SQLEXPRESS;Initial Catalog=skill_international;Integrated Security=True;";
         SqlConnection conn = null;
         public register()
         {
-            conn = new SqlConnection("Data Source=DESKTOP-55L8O5D\\\\SQLEXPRESS;Initial Catalog=skill_international;Integrated Security=True;");
+            conn = new SqlConnection("Data Source=DESKTOP-DB9FPLV\\\\SQLEXPRESS;Initial Catalog=skill_international;Integrated Security=True;");
             InitializeComponent();
             LoadComboBoxData();
-
+           
 
         }
 
@@ -82,7 +83,7 @@ namespace SkillInternatoinal
             }
 
 
-            string constring = ("Data Source=DESKTOP-55L8O5D\\SQLEXPRESS;Initial Catalog=skill_international;Integrated Security=True;");
+            string constring = ("Data Source=DESKTOP-DB9FPLV\\SQLEXPRESS;Initial Catalog=skill_international;Integrated Security=True;");
             string quary = "INSERT INTO registers (regNo,firstName,lastName , dateOfBirth, gender , address , email , mobilePhone , homePhone , parentName , nic , contactNo ) VALUES ('" + regInput.Text + "','" + f_name.Text + "' , '" + l_name.Text + "','" + dob.Value.Date + "','" + g + "','" + address_input.Text + "','" + email_input.Text + "','" + mp.Text + "','" + hp.Text + "','" + p_name.Text + "','" + nic_no.Text + "','" + c_no.Text + "')";
             SqlConnection conn;
             conn = new SqlConnection(constring);

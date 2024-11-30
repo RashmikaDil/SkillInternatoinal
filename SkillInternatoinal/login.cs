@@ -24,10 +24,10 @@ namespace SkillInternatoinal
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string user = textBox1.Text;
-            string password = textBox2.Text;
+            string user = username.Text;
+            string password = this.password.Text;
 
-            if (user == "Admin" && password == "Skills@123")
+            if (user == "Admin" && password == "123")
             {
                 MessageBox.Show(
                     "Login sucess!",
@@ -35,7 +35,7 @@ namespace SkillInternatoinal
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 
-                register dashboard = new register();
+                Dashboard dashboard = new Dashboard();
                 dashboard.Show();
                 this.Hide();
 
@@ -63,9 +63,9 @@ namespace SkillInternatoinal
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox1.Text = string.Empty;
-            textBox2.Text = string.Empty;
-            textBox1.Focus();
+            username.Text = string.Empty;
+            password.Text = string.Empty;
+            username.Focus();
         }
     }
 }

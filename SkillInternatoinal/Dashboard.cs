@@ -23,5 +23,17 @@ namespace SkillInternatoinal
             login.Show();
             this.Close();
         }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Reg_btn_Click(object sender, EventArgs e)
+        {
+            register NavReg = new register();
+            NavReg.Show();
+            this.Hide();
+        }
     }
 }

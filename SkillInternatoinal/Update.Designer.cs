@@ -1,6 +1,6 @@
 ﻿namespace SkillInternatoinal
 {
-    partial class Registration
+    partial class Update
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.update_btn = new System.Windows.Forms.Button();
-            this.register_btn = new System.Windows.Forms.Button();
-            this.delete_btn = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.dashboard = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.c_no = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -63,9 +61,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.exit = new System.Windows.Forms.LinkLabel();
-            this.logout = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -75,10 +70,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.update_btn);
-            this.groupBox1.Controls.Add(this.register_btn);
-            this.groupBox1.Controls.Add(this.delete_btn);
-            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.dashboard);
+            this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.regInput);
@@ -86,74 +79,44 @@
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(12, 43);
+            this.groupBox1.Location = new System.Drawing.Point(71, 55);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(891, 439);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "\tStudent Registration";
             // 
-            // update_btn
+            // dashboard
             // 
-            this.update_btn.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.update_btn.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.update_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.update_btn.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.update_btn.Location = new System.Drawing.Point(701, 317);
-            this.update_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.update_btn.Name = "update_btn";
-            this.update_btn.Size = new System.Drawing.Size(164, 37);
-            this.update_btn.TabIndex = 12;
-            this.update_btn.Text = "Update";
-            this.update_btn.UseVisualStyleBackColor = false;
-            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
+            this.dashboard.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.dashboard.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashboard.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.dashboard.Location = new System.Drawing.Point(719, 332);
+            this.dashboard.Margin = new System.Windows.Forms.Padding(4);
+            this.dashboard.Name = "dashboard";
+            this.dashboard.Size = new System.Drawing.Size(164, 37);
+            this.dashboard.TabIndex = 9;
+            this.dashboard.Text = "DASHBOARD";
+            this.dashboard.UseVisualStyleBackColor = false;
+            this.dashboard.Click += new System.EventHandler(this.dashboard_Click);
             // 
-            // register_btn
+            // btnSave
             // 
-            this.register_btn.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.register_btn.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.register_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.register_btn.ForeColor = System.Drawing.Color.White;
-            this.register_btn.Location = new System.Drawing.Point(701, 234);
-            this.register_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.register_btn.Name = "register_btn";
-            this.register_btn.Size = new System.Drawing.Size(164, 37);
-            this.register_btn.TabIndex = 11;
-            this.register_btn.Text = "Register";
-            this.register_btn.UseVisualStyleBackColor = false;
-            this.register_btn.Click += new System.EventHandler(this.register_btn_Click);
-            // 
-            // delete_btn
-            // 
-            this.delete_btn.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.delete_btn.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.delete_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete_btn.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.delete_btn.Location = new System.Drawing.Point(701, 276);
-            this.delete_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.delete_btn.Name = "delete_btn";
-            this.delete_btn.Size = new System.Drawing.Size(164, 37);
-            this.delete_btn.TabIndex = 10;
-            this.delete_btn.Text = "Delete";
-            this.delete_btn.UseVisualStyleBackColor = false;
-            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.button4.Location = new System.Drawing.Point(701, 359);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(164, 37);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Clear";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnSave.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.btnSave.Location = new System.Drawing.Point(719, 377);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(164, 37);
+            this.btnSave.TabIndex = 8;
+            this.btnSave.Text = "Update";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
             // 
             // groupBox4
             // 
@@ -164,7 +127,7 @@
             this.groupBox4.Controls.Add(this.p_name);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.groupBox4.Location = new System.Drawing.Point(463, 60);
+            this.groupBox4.Location = new System.Drawing.Point(463, 82);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
@@ -180,7 +143,6 @@
             this.c_no.Name = "c_no";
             this.c_no.Size = new System.Drawing.Size(163, 22);
             this.c_no.TabIndex = 13;
-            this.c_no.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // label13
             // 
@@ -242,7 +204,7 @@
             this.groupBox3.Controls.Add(this.address_input);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.groupBox3.Location = new System.Drawing.Point(20, 217);
+            this.groupBox3.Location = new System.Drawing.Point(20, 239);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
@@ -361,7 +323,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.groupBox2.Location = new System.Drawing.Point(20, 60);
+            this.groupBox2.Location = new System.Drawing.Point(20, 82);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -411,7 +373,6 @@
             this.l_name.Name = "l_name";
             this.l_name.Size = new System.Drawing.Size(275, 22);
             this.l_name.TabIndex = 5;
-            this.l_name.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // f_name
             // 
@@ -475,57 +436,19 @@
             this.pictureBox1.Size = new System.Drawing.Size(540, 233);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label1
+            // Update
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label1.Location = new System.Drawing.Point(345, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 31);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Skill International";
-            // 
-            // exit
-            // 
-            this.exit.AutoSize = true;
-            this.exit.Location = new System.Drawing.Point(29, 502);
-            this.exit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(28, 16);
-            this.exit.TabIndex = 4;
-            this.exit.TabStop = true;
-            this.exit.Text = "Exit";
-            this.exit.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.exit_LinkClicked);
-            // 
-            // logout
-            // 
-            this.logout.AutoSize = true;
-            this.logout.Location = new System.Drawing.Point(80, 502);
-            this.logout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(50, 16);
-            this.logout.TabIndex = 5;
-            this.logout.TabStop = true;
-            this.logout.Text = "LogOut";
-            this.logout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logout_LinkClicked);
-            // 
-            // Registration
-            // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(916, 533);
-            this.Controls.Add(this.logout);
-            this.Controls.Add(this.exit);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1032, 548);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Registration";
-            this.Text = "Student Registration";
-            this.Load += new System.EventHandler(this.register_Load);
+            this.Name = "Update";
+            this.Text = "Update Student Details";
+            this.Load += new System.EventHandler(this.Update_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -536,35 +459,13 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox regInput;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dob;
-        private System.Windows.Forms.TextBox l_name;
-        private System.Windows.Forms.TextBox f_name;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox address_input;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox hp;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox mp;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox email_input;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox c_no;
         private System.Windows.Forms.Label label13;
@@ -572,12 +473,28 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox p_name;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox hp;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox mp;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox email_input;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox address_input;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox regInput;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.DateTimePicker dob;
+        private System.Windows.Forms.TextBox l_name;
+        private System.Windows.Forms.TextBox f_name;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button delete_btn;
-        private System.Windows.Forms.Button register_btn;
-        private System.Windows.Forms.LinkLabel exit;
-        private System.Windows.Forms.LinkLabel logout;
-        private System.Windows.Forms.Button update_btn;
+        private System.Windows.Forms.Button dashboard;
     }
 }

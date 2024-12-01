@@ -24,7 +24,7 @@ namespace SkillInternatoinal
         SqlConnection conn = null;
         public register()
         {
-            conn = new SqlConnection("Data Source=DESKTOP-55L8O5D\\\\SQLEXPRESS;Initial Catalog=skill_international;Integrated Security=True;");
+            conn = new SqlConnection("Data Source=DESKTOP-55L8O5D\\SQLEXPRESS;Initial Catalog=skill_international;Integrated Security=True;");
             InitializeComponent();
             LoadComboBoxData();
            

@@ -27,7 +27,7 @@ namespace SkillInternatoinal
             string user = username.Text;
             string password = this.password.Text;
 
-            if (user == "Admin" && password == "123")
+            if (user == "Admin" && password == "Skills@123")
             {
                 MessageBox.Show(
                     "Login sucess!",

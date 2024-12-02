@@ -521,7 +521,7 @@
             this.Controls.Add(this.exit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Registration";
             this.Text = "Student Registration";

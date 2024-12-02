@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dashboard = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.c_no = new System.Windows.Forms.TextBox();
@@ -53,7 +52,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.dob = new System.Windows.Forms.DateTimePicker();
+            this.date_ob = new System.Windows.Forms.DateTimePicker();
             this.l_name = new System.Windows.Forms.TextBox();
             this.f_name = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,6 +60,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dashboard = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -70,7 +70,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dashboard);
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
@@ -79,7 +78,7 @@
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(71, 55);
+            this.groupBox1.Location = new System.Drawing.Point(63, 38);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -88,28 +87,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "\tStudent Registration";
             // 
-            // dashboard
-            // 
-            this.dashboard.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.dashboard.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dashboard.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.dashboard.Location = new System.Drawing.Point(719, 332);
-            this.dashboard.Margin = new System.Windows.Forms.Padding(4);
-            this.dashboard.Name = "dashboard";
-            this.dashboard.Size = new System.Drawing.Size(164, 37);
-            this.dashboard.TabIndex = 9;
-            this.dashboard.Text = "DASHBOARD";
-            this.dashboard.UseVisualStyleBackColor = false;
-            this.dashboard.Click += new System.EventHandler(this.dashboard_Click);
-            // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.btnSave.Location = new System.Drawing.Point(719, 377);
+            this.btnSave.Location = new System.Drawing.Point(702, 377);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(164, 37);
@@ -315,7 +299,7 @@
             // 
             this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Controls.Add(this.dob);
+            this.groupBox2.Controls.Add(this.date_ob);
             this.groupBox2.Controls.Add(this.l_name);
             this.groupBox2.Controls.Add(this.f_name);
             this.groupBox2.Controls.Add(this.label6);
@@ -358,13 +342,13 @@
             this.radioButton1.Text = "Male";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // dob
+            // date_ob
             // 
-            this.dob.Location = new System.Drawing.Point(109, 76);
-            this.dob.Margin = new System.Windows.Forms.Padding(4);
-            this.dob.Name = "dob";
-            this.dob.Size = new System.Drawing.Size(165, 22);
-            this.dob.TabIndex = 6;
+            this.date_ob.Location = new System.Drawing.Point(109, 76);
+            this.date_ob.Margin = new System.Windows.Forms.Padding(4);
+            this.date_ob.Name = "date_ob";
+            this.date_ob.Size = new System.Drawing.Size(165, 22);
+            this.date_ob.TabIndex = 6;
             // 
             // l_name
             // 
@@ -438,15 +422,32 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // dashboard
+            // 
+            this.dashboard.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.dashboard.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashboard.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.dashboard.Location = new System.Drawing.Point(25, 492);
+            this.dashboard.Margin = new System.Windows.Forms.Padding(4);
+            this.dashboard.Name = "dashboard";
+            this.dashboard.Size = new System.Drawing.Size(164, 37);
+            this.dashboard.TabIndex = 9;
+            this.dashboard.Text = "DASHBOARD";
+            this.dashboard.UseVisualStyleBackColor = false;
+            this.dashboard.Click += new System.EventHandler(this.dashboard_Click);
+            // 
             // Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1032, 548);
+            this.Controls.Add(this.dashboard);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Update";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Student Details";
             this.Load += new System.EventHandler(this.Update_Load);
             this.groupBox1.ResumeLayout(false);
@@ -487,7 +488,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.DateTimePicker dob;
+        private System.Windows.Forms.DateTimePicker date_ob;
         private System.Windows.Forms.TextBox l_name;
         private System.Windows.Forms.TextBox f_name;
         private System.Windows.Forms.Label label6;

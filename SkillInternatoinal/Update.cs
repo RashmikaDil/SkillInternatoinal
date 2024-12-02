@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace SkillInternatoinal
 {
@@ -47,12 +48,12 @@ namespace SkillInternatoinal
 
                             if (reader["dateOfBirth"] != DBNull.Value)
                             {
-                                dob.Value = Convert.ToDateTime(reader["dateOfBirth"]);
+                                date_ob.Value = Convert.ToDateTime(reader["dateOfBirth"]);
                             }
                             else
                             {
 
-                                dob.Value = DateTime.Today;
+                                date_ob.Value = DateTime.Today;
                             }
 
                             string gender = reader["gender"].ToString();
@@ -168,33 +169,9 @@ namespace SkillInternatoinal
 
         private void btnSave_Click_1(object sender, EventArgs e)
         {
-
-
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-
-                connection.Open();
-
-
-                string checkQuery = "SELECT COUNT(*) FROM registers WHERE regNo = @regNo";
-                using (SqlCommand checkCommand = new SqlCommand(checkQuery, connection))
-                {
-                    checkCommand.Parameters.AddWithValue("@regNo", regInput.Text);
-                    int count = (int)checkCommand.ExecuteScalar();
-
-                    if (count == 0)
-                    {
-                        MessageBox.Show("Invalid Registration Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                }
-            }
-
-
             if (radioButton1.Checked == true)
             {
-                g = "Male";
+                g = "male";
             }
             else
             {
@@ -202,27 +179,76 @@ namespace SkillInternatoinal
             }
 
 
-          string quary = "update registers ('" + regInput.Text + "','" + f_name.Text + "' , '" + l_name.Text + "','" + dob.Value.Date + "','" + g + "','" + address_input.Text + "','" + email_input.Text + "','" + mp.Text + "','" + hp.Text + "','" + p_name.Text + "','" + nic_no.Text + "','" + c_no.Text + "')";
-            SqlConnection conn;
-            conn = new SqlConnection(connectionString);
-            SqlCommand runQuary = new SqlCommand(quary, conn);
-
-            conn.Open();
-            runQuary.ExecuteNonQuery();
-            MessageBox.Show("Student Detail Updated Sucessfully ! ", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                int id = int.Parse(regInput.Text);
+                string fname = f_name.Text;
+                string lname = l_name.Text;
+                DateTime dob = date_ob.Value;
 
 
+                string address = address_input.Text;
+                string e_mail = email_input.Text;
+                int phoneno = int.Parse(mp.Text);
+                int homeno = int.Parse(hp.Text);
+                int n_ic = int.Parse(nic_no.Text);
+                string p_no = c_no.Text;
+                string p_na = p_name.Text;
 
 
+                string query = "UPDATE  registers SET  firstName = @fname , lastName = @lname ,dateOfBirth = @dob , gender = @gender,address = @address, email = @e_mail_a, mobilePhone = @phoneno, homePhone = @homeno, parentName = @pa_na , nic = @n_ic , contactNo = @p_na WHERE regNo = @ID";
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@ID", id);
+                        command.Parameters.AddWithValue("@fname", fname);
+                        command.Parameters.AddWithValue("@lname", lname);
+                        command.Parameters.AddWithValue("@dob", dob);
+                        command.Parameters.AddWithValue("@gender", g);
+                        command.Parameters.AddWithValue("@address", address);
+                        command.Parameters.AddWithValue("@e_mail_a", e_mail);
+                        command.Parameters.AddWithValue("@phoneNo", phoneno );
+                        command.Parameters.AddWithValue("p_na", p_na);
+                        command.Parameters.AddWithValue("@n_ic", n_ic);
+                        command.Parameters.AddWithValue("@pa_na", p_na);
+                        command.Parameters.AddWithValue("@homeno", p_no);
+
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                        connection.Close();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Record updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("No record found with the specified ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
 
 
-
-
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
+            }
+
+
+
+
+
+
+
+
+        
 
 
     }
-    } 
+    
 

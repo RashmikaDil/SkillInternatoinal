@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,14 @@ using System.Windows.Forms;
 namespace SkillInternatoinal
 {
     public partial class Dashboard : Form
+
     {
+        private object connection;
         private string connectionString = "Data Source=DESKTOP-55L8O5D\\SQLEXPRESS;Initial Catalog=skill_international;Integrated Security=True;";
         public Dashboard()
         {
             InitializeComponent();
+            CountStudets();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,7 +52,7 @@ namespace SkillInternatoinal
 
             try
             {
-                
+
                 SearchStudent(txtSearchRegNo.Text);
             }
             catch (Exception ex)
@@ -58,31 +62,31 @@ namespace SkillInternatoinal
         }
         private void SearchStudent(string regNo)
         {
-            
+
             string query = "SELECT regNo, firstName, lastName, dateOfBirth, gender, address, email, mobilePhone, homePhone, parentName, nic, contactNo " +
                            "FROM registers WHERE regNo = @regNo";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                
+
                 connection.Open();
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    
+
                     command.Parameters.AddWithValue("@regNo", regNo);
 
-                    
+
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
                     DataTable dataTable = new DataTable();
 
-                    
+
                     dataAdapter.Fill(dataTable);
 
-                    
+
                     if (dataTable.Rows.Count > 0)
                     {
-                        
+
                         stu_data.DataSource = dataTable;
                     }
                     else
@@ -102,6 +106,43 @@ namespace SkillInternatoinal
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void Credit_Click(object sender, EventArgs e)
+        {
+            credit credit = new credit();
+            credit.Show();
+        }
+
+        private void CountStudets()
+
+
+        {
+
+
+
+            try
+            {
+                string query = "SELECT COUNT(*) AS regNo FROM registers";
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        connection.Open();
+                        int totalRecords = (int)command.ExecuteScalar();
+                        stu_c.Text = $"{totalRecords}";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+
+
 
         }
     }

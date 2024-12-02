@@ -133,10 +133,10 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(473, 1);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(473, 16);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(408, 123);
+            this.pictureBox2.Size = new System.Drawing.Size(428, 108);
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
@@ -173,9 +173,9 @@
             this.groupBox1.Controls.Add(this.Login_btn);
             this.groupBox1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.groupBox1.Location = new System.Drawing.Point(497, 187);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(372, 247);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;

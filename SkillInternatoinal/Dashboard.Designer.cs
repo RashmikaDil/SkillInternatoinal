@@ -34,17 +34,18 @@
             this.exit = new System.Windows.Forms.Button();
             this.log_out = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.Credit = new System.Windows.Forms.Button();
+            this.update_btn = new System.Windows.Forms.Button();
             this.Reg_btn = new System.Windows.Forms.Button();
             this.stu_data = new System.Windows.Forms.DataGridView();
             this.txtSearchRegNo = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.update_btn = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.Credit = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.stu_c = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stu_data)).BeginInit();
@@ -119,6 +120,36 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Dashboard";
             // 
+            // Credit
+            // 
+            this.Credit.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Credit.FlatAppearance.BorderSize = 0;
+            this.Credit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Credit.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Credit.Location = new System.Drawing.Point(47, 458);
+            this.Credit.Name = "Credit";
+            this.Credit.Size = new System.Drawing.Size(207, 43);
+            this.Credit.TabIndex = 12;
+            this.Credit.Text = "Credit !";
+            this.Credit.UseVisualStyleBackColor = false;
+            this.Credit.Click += new System.EventHandler(this.Credit_Click);
+            // 
+            // update_btn
+            // 
+            this.update_btn.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.update_btn.FlatAppearance.BorderSize = 0;
+            this.update_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.update_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update_btn.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.update_btn.Location = new System.Drawing.Point(16, 148);
+            this.update_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.update_btn.Name = "update_btn";
+            this.update_btn.Size = new System.Drawing.Size(269, 42);
+            this.update_btn.TabIndex = 9;
+            this.update_btn.Text = "Update Student Data";
+            this.update_btn.UseVisualStyleBackColor = false;
+            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
+            // 
             // Reg_btn
             // 
             this.Reg_btn.BackColor = System.Drawing.Color.PaleTurquoise;
@@ -137,9 +168,10 @@
             // 
             // stu_data
             // 
-            this.stu_data.BackgroundColor = System.Drawing.Color.White;
+            this.stu_data.BackgroundColor = System.Drawing.Color.Azure;
+            this.stu_data.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.stu_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.stu_data.GridColor = System.Drawing.Color.White;
+            this.stu_data.GridColor = System.Drawing.Color.Azure;
             this.stu_data.Location = new System.Drawing.Point(329, 513);
             this.stu_data.Name = "stu_data";
             this.stu_data.RowHeadersWidth = 51;
@@ -151,8 +183,8 @@
             // 
             this.txtSearchRegNo.BackColor = System.Drawing.Color.White;
             this.txtSearchRegNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearchRegNo.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchRegNo.Location = new System.Drawing.Point(329, 480);
+            this.txtSearchRegNo.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txtSearchRegNo.Location = new System.Drawing.Point(399, 480);
             this.txtSearchRegNo.MaxLength = 50;
             this.txtSearchRegNo.Name = "txtSearchRegNo";
             this.txtSearchRegNo.Size = new System.Drawing.Size(206, 22);
@@ -172,36 +204,6 @@
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // update_btn
-            // 
-            this.update_btn.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.update_btn.FlatAppearance.BorderSize = 0;
-            this.update_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.update_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.update_btn.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.update_btn.Location = new System.Drawing.Point(16, 148);
-            this.update_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.update_btn.Name = "update_btn";
-            this.update_btn.Size = new System.Drawing.Size(269, 42);
-            this.update_btn.TabIndex = 9;
-            this.update_btn.Text = "Update Student Data";
-            this.update_btn.UseVisualStyleBackColor = false;
-            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
-            // 
-            // Credit
-            // 
-            this.Credit.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.Credit.FlatAppearance.BorderSize = 0;
-            this.Credit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Credit.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Credit.Location = new System.Drawing.Point(47, 458);
-            this.Credit.Name = "Credit";
-            this.Credit.Size = new System.Drawing.Size(207, 43);
-            this.Credit.TabIndex = 12;
-            this.Credit.Text = "Credit !";
-            this.Credit.UseVisualStyleBackColor = false;
-            this.Credit.Click += new System.EventHandler(this.Credit_Click);
             // 
             // label2
             // 
@@ -249,6 +251,16 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Student \r\nRegistered\r\n";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(332, 482);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 16);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "RegNo :";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -258,6 +270,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1154, 636);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.stu_c);
             this.Controls.Add(this.stu_data);
             this.Controls.Add(this.txtSearchRegNo);
@@ -299,5 +312,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label stu_c;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -196,7 +196,7 @@ namespace SkillInternatoinal
                 string p_na = p_name.Text;
 
 
-                string query = "UPDATE  registers SET  firstName = @fname , lastName = @lname ,dateOfBirth = @dob , gender = @gender,address = @address, email = @e_mail_a, mobilePhone = @phoneno, homePhone = @homeno, parentName = @pa_na , nic = @n_ic , contactNo = @p_na WHERE regNo = @ID";
+                string query = "UPDATE  registers SET regNo = @ID,  firstName = @fname , lastName = @lname ,dateOfBirth = @dob , gender = @gender,address = @address, email = @e_mail_a, mobilePhone = @phoneno, homePhone = @homeno, parentName = @pa_na , nic = @n_ic , contactNo = @p_na WHERE regNo = @ID";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     using (SqlCommand command = new SqlCommand(query, connection))
@@ -209,10 +209,10 @@ namespace SkillInternatoinal
                         command.Parameters.AddWithValue("@address", address);
                         command.Parameters.AddWithValue("@e_mail_a", e_mail);
                         command.Parameters.AddWithValue("@phoneNo", phoneno );
-                        command.Parameters.AddWithValue("p_na", p_na);
+                        command.Parameters.AddWithValue("@p_na", p_no);
                         command.Parameters.AddWithValue("@n_ic", n_ic);
                         command.Parameters.AddWithValue("@pa_na", p_na);
-                        command.Parameters.AddWithValue("@homeno", p_no);
+                        command.Parameters.AddWithValue("@homeno", homeno);
 
                         connection.Open();
                         int rowsAffected = command.ExecuteNonQuery();

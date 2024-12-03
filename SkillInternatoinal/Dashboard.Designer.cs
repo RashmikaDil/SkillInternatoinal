@@ -197,7 +197,7 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.btnSearch.Location = new System.Drawing.Point(947, 472);
+            this.btnSearch.Location = new System.Drawing.Point(946, 472);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(171, 35);
             this.btnSearch.TabIndex = 7;

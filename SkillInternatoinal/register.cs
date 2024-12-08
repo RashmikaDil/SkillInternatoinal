@@ -341,5 +341,12 @@ namespace SkillInternatoinal
             update.Show();
             this.Hide();
         }
+
+        private void dashboard_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Hide();
+        }
     }
 }

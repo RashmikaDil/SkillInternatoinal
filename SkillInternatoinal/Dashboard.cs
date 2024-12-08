@@ -116,12 +116,7 @@ namespace SkillInternatoinal
         }
 
         private void CountStudets()
-
-
         {
-
-
-
             try
             {
                 string query = "SELECT COUNT(*) AS regNo FROM registers";
@@ -143,6 +138,11 @@ namespace SkillInternatoinal
 
 
 
+
+        }
+
+        private void stu_c_Click(object sender, EventArgs e)
+        {
 
         }
     }

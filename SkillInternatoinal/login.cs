@@ -67,5 +67,10 @@ namespace SkillInternatoinal
             password.Text = string.Empty;
             username.Focus();
         }
+
+        private void username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
